@@ -340,11 +340,24 @@ class MagicPrepend():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="This program will detect, unpack and decompile binary that is packed in either py2exe or pyinstaller. (Use only one option)")
-    parser.add_argument("-i", dest="input" ,required=False, help="exe that is packed using py2exe or pyinstaller")
-    parser.add_argument("-o", dest="output" ,required=False, help="folder to store your unpacked and decompiled code. (Otherwise will default to current working directory and inside the folder\"unpacked\")")
-    parser.add_argument("-p", dest="prepend" ,required=False, help="Option that prepend pyc without magic bytes. (Usually for pyinstaller main python file)")
+    #  python2 python_exe_unpack.py -i Blong_Berts
+
+    parser = argparse.ArgumentParser(description=
+    "This program will detect, unpack and decompile binary that is packed in either py2exe or pyinstaller. (Use only one option)")
+
+    parser.add_argument("-i", dest=
+    "input" ,required=False, help="exe that is packed using py2exe or pyinstaller")
+
+    parser.add_argument("-o", dest=
+    "output" ,required=False, help=
+    "folder to store your unpacked and decompiled code. (Otherwise will default to current working directory and inside the folder\"unpacked\")")
+
+    parser.add_argument("-p", dest=
+    "prepend" ,required=False, help="Option that prepend pyc without magic bytes. (Usually for pyinstaller main python file)")
+
     args = parser.parse_args()
+
+    print("hz- args="+str(args))
 
     prepend_file = args.prepend
     file_name = args.input

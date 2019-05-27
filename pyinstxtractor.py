@@ -139,7 +139,7 @@ class PyInstArchive:
         self.fPtr.seek(self.fileSize - self.PYINST20_COOKIE_SIZE, os.SEEK_SET)
         magicFromFile = self.fPtr.read(len(self.MAGIC))
 
-        if magicFromFile == self.MAGIC:
+        if magicFromFile == self.MAGIC:#magicFromFile=0,self.MAGIC=8
             self.pyinstVer = 20     # pyinstaller 2.0
             print('[*] Pyinstaller version: 2.0')
             return True
@@ -148,7 +148,7 @@ class PyInstArchive:
         self.fPtr.seek(self.fileSize - self.PYINST21_COOKIE_SIZE, os.SEEK_SET)
         magicFromFile = self.fPtr.read(len(self.MAGIC))
 
-        if magicFromFile == self.MAGIC:
+        if magicFromFile == self.MAGIC:#magicFromFile=0,self.MAGIC='MEI\x0c\x0b\n\x0b\x0e'
             print('[*] Pyinstaller version: 2.1+')
             self.pyinstVer = 21     # pyinstaller 2.1+
             return True
