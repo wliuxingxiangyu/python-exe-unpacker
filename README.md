@@ -3,6 +3,7 @@ Company: Countercept (@countercept) <br />
 Website: https://www.countercept.com <br />
 
 ## Introduction
+此脚本是将python写的exe  去壳和反编译。也就是说用 c写的exe不能用这个。
 A script that helps researcher to unpack and decompile executable written in python. However, right now this only supports executable created with py2exe and pyinstaller.
 
 This script glues together several tools available to the community. Hopefully, this can help people in their daily job. Several YARA rules are available to determine if the executable is written in python (This script also confirms if the executable is created with either py2exe or pyinstaller).
